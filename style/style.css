@@ -1,0 +1,705 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    background-color: #212529;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10rem;
+}
+
+.header_nav {
+    font-weight: 600;
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+
+.header_nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all .25s;
+}
+
+.header_nav a:hover{
+    color: #FFB742;
+    cursor: url(../img/cursor/go.png), pointer;
+}
+
+/* hamburger-menu */
+.hamburger-menu{
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+  
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 61rem;
+}
+  
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    left: 70rem;
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+  
+.menu__box {
+    display: block;
+    position: absolute;
+    right: -20rem;
+    width: 15rem;
+    height: 25%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+  
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+
+}
+
+.menu__item a:hover{
+    text-decoration: underline;
+    color: #f1a325;
+}
+/*  */
+
+
+.btn{
+    font-weight: 700;
+    display: inline-block;
+    padding: 1rem;
+    width: 14rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    background-color: #FFB742;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: #212529;
+    box-sizing: border-box;
+    align-self:center;
+    text-align: center;
+    transition: all .25s;
+}
+
+.btn:hover{
+    border: 1px solid #000000;
+    background-color: #f1a325;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.main  :first-child{
+    font-weight: 700;
+    font-size: 3.2rem;
+    
+}
+
+.main :first-child a{
+    color: #FFB742;
+}
+.main h1{
+    font-weight: 700;
+    font-size: 4.8rem;
+    margin-top: 0;
+}
+
+.main p{
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.cards{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 7rem;
+    margin: 13.6rem 0;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(56, 62, 69, 0.44);
+    border-radius: 10px;
+    width: 30%;
+    height: 12.6rem;
+    transition: all 2s;
+}
+
+.card:hover{
+    cursor: pointer;
+    background: linear-gradient(94.3deg, #FFB742 0%, rgba(255, 123, 66, 0.76) 99.33%);
+}
+
+.text_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize; 
+}
+
+.text_card h3{
+    margin: 0;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: #FFB742;
+}
+
+.text_card h4{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 3.1rem;
+    color: #FFFFFF;
+}
+
+.about{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 22rem;
+}
+
+.about_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    width: 40%;
+    font-family: 'Poppins';
+}
+
+.about_text h3{
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: #FFB742;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    text-align: center;
+    padding: 1rem 3rem;
+    
+}
+
+.about_text h2{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.about_text p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    color: #D5D5D5;
+    padding-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 5.5rem;
+}
+
+.about_text a{
+    align-self: start;
+    padding-left: 1rem;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-around;
+
+}
+.skills_items{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 18rem;
+    padding-top: 2rem;
+
+}
+
+.skills_item{
+    width: 8rem;
+    height: 8rem;
+    background: #383E45;
+    border-radius: 10px;
+    margin-left: 1.6rem;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+}
+
+.skills_item:hover{
+    background: rgba(255, 183, 66, 0.5);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.portfolio, .testimonials{
+    margin-top: 13.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio .about_text, .testimonials .about_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation{
+    font-family: 'Poppins';
+    list-style: none;
+    color:#FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45%;
+    margin: 3rem 0rem;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color:#FFFFFF;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.portfolio h3 {
+    margin-bottom: 0;
+}
+
+.navigation li a:hover{
+    color: #000000;
+    background: #FFB742;
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+
+.works{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10rem;
+}
+
+.works div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.work_col_center{
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+.works div img{
+    margin-bottom: 3rem;
+    width: 120%;
+}
+.feedback{
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10rem;
+    margin-bottom: 25rem;
+}
+
+
+.feedback_card{
+    background-color: #FFFFFF;
+    width: 23%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5rem 3rem;
+}
+
+.feedback_card p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+}
+
+.client_info{
+    display: flex;
+    justify-content: start;
+    margin-top: 3rem;
+}
+
+.client_info img{
+    width: 25%;
+    margin-right: 3rem;
+}
+
+.client{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.client h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.4rem;
+}
+
+.client p{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 3.4rem;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    height: 47rem;
+    background: #1C1C1C;
+    margin: 0;
+    width: 100%;
+}
+
+.footer div{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 15rem 10rem;
+}
+
+.footer div h1{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 100%;
+    color: #FFB742;
+}
+
+.footer div h3{
+    font-family: 'Work Sans';
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    color: #D4D4D4;
+}
+
+.footer div h2{
+    font-family: 'Work Sans';
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    color: #F5FBF2;
+}
+
+.footer div ul{
+    margin: 0;
+    padding: 0;
+
+}
+
+.contact_link{
+    list-style: none;
+}
+
+.contact_link a, .footer div a{
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    color: #7B7B7B;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.contact_link a:hover, .footer div a:hover{
+    text-decoration: underline;
+    color: #FFB742;
+}
+
+.to_up{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    transition: all 0.5s;
+}
+
+.to_up circle:hover{
+    fill: #f1a325;
+    fill-opacity: 0.25;
+}
+.ancor_link{
+    cursor: url(../img/cursor/go.png), pointer;
+}
+.instagram:hover{
+    cursor: url(../img/cursor/instagram.png), pointer;
+}
+.linkedin:hover{
+    cursor: url(../img/cursor/linkedin.png), pointer;
+}
+.dribbble:hover{
+    cursor: url(../img/cursor/dribbble.png), pointer;
+}
+.behance:hover{
+    cursor: url(../img/cursor/behance.png), pointer;
+}
+.github:hover{
+    cursor: url(../img/cursor/github.png), pointer;
+}
+
+@media screen and (max-width: 768px){
+    
+    body{
+        padding: 0rem 3rem;
+    }
+
+    .header_nav{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .header .btn{
+        position: absolute;
+        top: 75rem;
+        left: 31rem;
+    }
+
+    .main{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main h1{
+        font-size: 4rem;
+    }
+
+    .card{
+        height: 10rem;
+        padding: 0.5rem;
+    }
+
+    .card img{
+        width: 20%;
+    }
+
+    .text_card h3{
+        font-size: 2.5rem;
+        
+    }
+
+    .text_card h4{
+        font-size: 1rem;
+    }
+
+    .about{
+        justify-content: start;
+        margin: 10rem 0rem;
+    }
+
+    .about img{
+        position: absolute;
+        width: 65%;
+        top: 110rem;
+        right: 0rem;
+    }
+
+    .about_text h2{
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .about_text h3{
+        display: none;
+    }
+
+
+    .about_text a{
+        position: absolute;
+        top: 157rem;
+        right: 15rem;
+    }
+
+    .skills{
+        justify-content: start;
+        margin: 10rem 0rem;
+        flex-direction: row-reverse;
+    }
+
+
+    .skills_items{
+        width: 60%;
+    }
+    
+    .navigation{
+        width: 80%;
+    }
+
+    .work_col_center{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+   
+    .testimonials .about_text h2{
+        display: block;
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    .feedback_card{
+        padding: 1rem 2rem;
+    }
+
+    .feedback_card p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .feedback_card{
+        width: 20%;
+    }
+
+    .client_info img{
+        display: none;
+    }
+
+    .client h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+
+    .footer{
+        height: 20rem;
+    }
+
+
+    .footer div{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        padding: 2rem 2rem;
+    }
+
+    .footer div h1{
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+    
+    .footer div h3{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    
+    .footer div h2{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .contact_link a, .footer div a{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    
+
+    .feedback{
+        margin-bottom: 10rem;
+    }
+}
